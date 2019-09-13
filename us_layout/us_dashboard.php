@@ -32,8 +32,21 @@
                         <a class="nav-item nav-link" href="about.html">Beranda</a>
                         <a class="nav-item nav-link" href="contact.html">Tentang Kami</a>
                         <a class="nav-item nav-link" href="gallery.html">Hubungi Kami</a>
-                        <a class="nav-item nav-link" href="./tentang.php">Kelola Pesanan</a>
-                        <a class="nav-item nav-link" href="./tentang.php">Kelola Akun</a>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Pesanan</a>
+                            <div class="dropdown-menu mt-2">
+                                <a class="dropdown-item" href="#">Tambah Pesanan</a>
+                                <a class="dropdown-item" href="#">Lihat Pesanan</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Akun</a>
+                            <div class="dropdown-menu mt-2">
+                                <a class="dropdown-item" href="#">Lihat Akun</a>
+                                <a class="dropdown-item" href="#">Ubah Akun</a>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

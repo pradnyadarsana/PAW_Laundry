@@ -33,21 +33,20 @@
                         <!--<a class="nav-item nav-link" href="contact.html">Kelola Harga</a>-->
                         <div class="dropdown">
                             <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="contact.html" 
-                            aria-haspopup="true" aria-expanded="false">Kelola Harga</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            aria-haspopup="true" aria-expanded="false">Kelola Paket</a>
+                            <div class="dropdown-menu mt-2">
+                                <a class="dropdown-item" href="#">Tambah Paket</a>
+                                <a class="dropdown-item" href="#">Lihat Paket</a>
                             </div>
                         </div>
                         <a class="nav-item nav-link" href="./tentang.php">Kelola Pesanan</a>
-                        <a class="nav-item nav-link" href="./tentang.php">Kelola Akun</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Akun</a>
+                            <div class="dropdown-menu mt-2">
+                                <a class="dropdown-item" href="#">Lihat Akun</a>
+                                <a class="dropdown-item" href="#">Ubah Akun</a>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </div>
                         </div>
                     </div>
                 </div>
