@@ -1,7 +1,8 @@
 <?php
 include "./dashboard.php";
 echo'    
-        <div class="jumbotron mt-5 mb-5 about-page text-light text-right" style="background-image: url(./img/header/laundry.jpg); width 100%">
+        <div class="jumbotron mt-5 mb-5 about-page text-light text-right">
+            <div class="bg-tentang"></div>
             <div class="container">
                 <h1 class="display-4 font-weight-bold mt-5">Welcome!</h1>
                 <p class="lead font-weight-normal">This is the website of National Library of Wakanda.</p>

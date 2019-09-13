@@ -1,0 +1,24 @@
+.backgroundAll{
+    background-color: rgb(240, 240, 240);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    z-index: -1;
+}
+
+.background-login{
+    background-image: url(./img/bg/blanket.jpg);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    z-index: -1;
+}
+
+.bg-tentang{
+    background-image: url(./img/header/laundry.jpg); 
+    width: 100%;
+}
