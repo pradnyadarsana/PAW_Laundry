@@ -13,7 +13,7 @@ echo'
                 <div class="form-group col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <form>
+                            <form method="post">
                                 <div class="form-group text-center mt-4 mb-5">
                                     <h3>Log In Pengguna</h3>
                                 </div>
