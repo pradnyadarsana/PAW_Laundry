@@ -1,6 +1,8 @@
 <?php
 include "./dashboard.php";
 echo'    
+<title>Tentang Page</title>
+
         <div class="jumbotron mt-5 mb-5 about-page text-light text-right">
             <div class="bg-tentang"></div>
             <div class="container">

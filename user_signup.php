@@ -1,6 +1,8 @@
 <?php
 include './dashboard.php';
 echo'
+<title>Sign Up - PAW Laundry</title>
+
     <div class="background-login"></div>
         <div class="container" style="margin-top: 10%">
             <div class="form-row mt-5 justify-content-center">
@@ -25,7 +27,7 @@ echo'
                                 </div>
                                 <div class="form-group">
                                     <label for="username">Username</label>
-                                    <input type="text" class="form-control" name="username" placeholder="Enter username">
+                                    <input type="text" class="form-control" name="username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
@@ -52,7 +54,7 @@ echo'
                                 </div>   
                                 <center><button type="submit" class="btn btn-primary">Sign Up</button></center>
 
-                                <small id="signup" class="form-text text-muted text-center mt-5">Sudah punya akun? <a href="./user_login.php">Sign Up</a></small>
+                                <small id="signup" class="form-text text-muted text-center mt-5">Sudah punya akun? <a href="./user_login.php">Login</a></small>
 
                             </form>
                         </div>
