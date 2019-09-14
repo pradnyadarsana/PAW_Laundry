@@ -27,7 +27,7 @@ echo'
                                 </div>
                                 <center><button type="submit" class="btn btn-primary">Log In</button></center>
 
-                                <small id="signup" class="form-text text-muted text-center mt-5">Bukan pegawai? <a href="./user_login.php">Login disini</a></small>
+                                <small id="signup" class="form-text text-muted text-center mt-5">Bukan pegawai? <a href="./index.php">Login disini</a></small>
 
                             </form>
                         </div>

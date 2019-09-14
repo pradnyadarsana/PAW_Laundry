@@ -54,7 +54,7 @@ echo'
                                 </div>   
                                 <center><button name="store" type="submit" value="Sign Up" class="btn btn-primary">Sign Up</button></center>
 
-                                <small id="signup" class="form-text text-muted text-center mt-5">Sudah punya akun? <a href="./user_login.php">Login</a></small>
+                                <small id="signup" class="form-text text-muted text-center mt-5">Sudah punya akun? <a href="./index.php">Login</a></small>
 
                             </form>
                         </div>

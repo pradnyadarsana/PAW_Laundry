@@ -1,5 +1,5 @@
 <?php
-echo '<script>alert("test")</script>';
+
 if(isset($_POST['store'])){
     include('../db.php');
 
@@ -25,20 +25,31 @@ if(isset($_POST['store'])){
     VALUE('$nama','$telp','$email','$username','$password','$tanggalLahir','$jenisKelamin','$status','$verif_code')") or die(mysqli_error($con));
     
     $to 	= $email;
-    $judul 	= "Aktivasi Akun Anda";
-    $dari	= "From: pawlaundry@gmail.com \n";
-    $dari	.= "Content-type: text/html \r\n";
+    $judul 	= 'Sign Up | Verifikasi';
+    $dari	= 'From: pawlaundry@gmail.com' . "\r\n";
 
-    $pesan	= "Kode verifikasi anda: <br />";
-    $pesan	.= $verif_code;
+    $pesan	= '
+    Terima kasih sudah ingin bergabung bersama kami!
+    Akun anda telah dibuat, kamu bisa login setelah melakukan verifikasi dengan memberikan kode di bawah ini.
+    
+    ------------------------
+    Username: '.$username.'
+    Email: '.$email.'
+    ------------------------
+     
+    Kode Verifikasi : '.$verif_code.'
+     
+    ';
+
 
     $kirim	= mail($to, $judul, $pesan, $dari);
 
     if($kirim AND $input){
-        echo '<script>alert("success"); window.location = "../email_verification.php"</script>';
+        echo '<script>alert("success"); window.location = "../verification_page.php?username='.$username.'"</script>';
     }else{
         //echo '<script>alert("failed"); window.location = "../user_signup.php"</script>';
-        echo '<script>window.history.back()</script>';
+        //echo '<script>window.history.back()</script>';
+        echo '<script>alert("test")</script>';
     }
 }else{
     echo '<script>window.history.back()</script>';
