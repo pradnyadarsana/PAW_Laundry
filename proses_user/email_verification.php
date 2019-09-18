@@ -8,7 +8,7 @@ if(isset($_POST['verification'])){
 
     $query = mysqli_query($con,"SELECT * FROM data_pengguna WHERE email='$email' AND status_aktif=0 AND kode_verif='$kode'")or die(mysqli_error($con));
     if($query){
-        $input = mysqli_query($con,"UPDATE data_pengguna set status_aktif=1 WHERE username='$username'") or die(mysqli_error($con));
+        $input = mysqli_query($con,"UPDATE data_pengguna set status_aktif=1 WHERE email='$email'") or die(mysqli_error($con));
         if($input){
             echo '<script>alert("Email telah aktif!");
                 window.location="../index.php" </script>';
