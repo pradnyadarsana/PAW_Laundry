@@ -7,7 +7,7 @@ echo'
             <div class="bg-tentang"></div>
             <div class="container">
                 <h1 class="display-4 font-weight-bold mt-5">Welcome!</h1>
-                <p class="lead font-weight-normal">This is the website of National Library of Wakanda.</p>
+                <p class="lead font-weight-normal">PAW Laundry</p>
                 <hr class="my-4" style="color: white">
                 <p class="font-italic mb-5">“When in doubt, go to the library.” ― J.K. Rowling</p>
             </div>
@@ -40,7 +40,7 @@ echo'
                         </div>
                     </div>
                     <div class="form-group col-md-6">
-                        <img src="img/gambar/arch1.jpg" alt="library" style="width: 100%">
+                        <img src="./img/pic/attractive-woman.jpg" alt="library" style="width: 100%">
                     </div>
                 </div>
             </div>
