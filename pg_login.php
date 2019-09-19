@@ -25,7 +25,7 @@ echo'
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="Password">
                                 </div>
-                                <center><button type="submit" class="btn btn-primary">Log In</button></center>
+                                <center><button type="submit" name="login" class="btn btn-primary">Log In</button></center>
 
                                 <small id="signup" class="form-text text-muted text-center mt-5">Bukan pegawai? <a href="./index.php">Login disini</a></small>
 

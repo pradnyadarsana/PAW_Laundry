@@ -24,7 +24,7 @@ if(isset($_POST['store'])){
     $input = mysqli_query($con,"INSERT INTO data_pengguna(nama, telepon, email, username, password, tanggal_lahir, jenis_kelamin, status_aktif, kode_verif)
     VALUE('$nama','$telp','$email','$username','$password','$tanggalLahir','$jenisKelamin','$status','$verif_code')") or die(mysqli_error($con));
     
-    $to 	= $email;
+    /*$to 	= $email;
     $judul 	= 'Sign Up | Verifikasi';
     $dari	= 'From: pawlaundry@gmail.com' . "\r\n";
 
@@ -42,9 +42,9 @@ if(isset($_POST['store'])){
     ';
 
 
-    $kirim	= mail($to, $judul, $pesan, $dari);
+    $kirim	= mail($to, $judul, $pesan, $dari);*/
 
-    if($kirim AND $input){
+    if($input){
         echo '<script>alert("success"); window.location = "../verification_page.php?username='.$username.'"</script>';
     }else{
         //echo '<script>alert("failed"); window.location = "../user_signup.php"</script>';

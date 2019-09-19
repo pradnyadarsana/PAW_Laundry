@@ -13,7 +13,7 @@ echo'
                 <div class="form-group col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <form method="post">
+                            <form action="./proses_user/login_user.php" method="post">
                                 <div class="form-group text-center mt-4 mb-5">
                                     <h3>Log In Pengguna</h3>
                                 </div>
@@ -25,7 +25,7 @@ echo'
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="Password">
                                 </div>
-                                <center><button type="submit" class="btn btn-primary">Log In</button></center>
+                                <center><button type="submit" name="login" class="btn btn-primary">Log In</button></center>
 
                                 <small id="signup" class="form-text text-muted text-center mt-5">Belum punya akun? <a href="./user_signup.php">Sign Up</a></small>
 
