@@ -1,6 +1,8 @@
 <?php
-include '../pg_layout/pg_dashboard.php';
-echo'
+session_start();
+if($_SESSION['isLoginPegawai']){
+    include '../pg_layout/pg_dashboard.php';
+    echo'
     <title>Beranda - PAW Laundry</title>
     <div class="bd-example mt-5">
             <div id="carouselBeranda" class="carousel slide carousel-fade" data-ride="carousel">
@@ -53,4 +55,5 @@ echo'
         </div>
     </body>
 </html>';
+}
 ?>

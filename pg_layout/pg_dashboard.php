@@ -36,8 +36,8 @@ include "../db.php";
                             <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="#" 
                             aria-haspopup="true" aria-expanded="false">Kelola Paket</a>
                             <div class="dropdown-menu mt-2">
-                                <a class="dropdown-item" href="#">Tambah Paket</a>
-                                <a class="dropdown-item" href="#">Lihat Paket</a>
+                                <a class="dropdown-item" href="../pg_dashboard/tambah_paket.php">Tambah Paket</a>
+                                <a class="dropdown-item" href="../pg_dashboard/list_paket.php">Lihat Paket</a>
                             </div>
                         </div>
                         <a class="nav-item nav-link" href="./tentang.php">Kelola Pesanan</a>
