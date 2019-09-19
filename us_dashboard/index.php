@@ -1,4 +1,6 @@
 <?php
+include '../us_layout/dashboard.php';
+echo'
     <body id="top" class="contact-page">
     <title>Landing Page - PAW Laundry</title>
     <div class="container">
@@ -9,5 +11,5 @@
             </div>
         </div>
     </body>
-</html>
+</html>';
 ?>
