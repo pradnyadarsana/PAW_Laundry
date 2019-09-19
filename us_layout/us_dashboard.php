@@ -1,4 +1,5 @@
 <?php
+include "../db.php";
     echo '<!doctype html>
     <html lang="en">
     <head>
@@ -23,13 +24,13 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="./us_dashboard"><img src="../img/icon/logo.png" width="30" alt="logo"></a>
-                <h3 class="navbar-brand">PAW Laundry</h3>
+                <a href="../us_dashboard"><h3 class="navbar-brand">PAW Laundry</h3></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link" href="about.html">Beranda</a>
+                        <a class="nav-item nav-link" href="../us_dashboard">Beranda</a>
                         <a class="nav-item nav-link" href="contact.html">Tentang Kami</a>
                         <a class="nav-item nav-link" href="gallery.html">Hubungi Kami</a>
                         <div class="dropdown">
@@ -42,9 +43,9 @@
                         <div class="dropdown">
                             <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Akun</a>
                             <div class="dropdown-menu mt-2">
-                                <a class="dropdown-item" href="#">Lihat Akun</a>
-                                <a class="dropdown-item" href="#">Ubah Akun</a>
-                                <a class="dropdown-item" href="#">Log Out</a>
+                                <a class="dropdown-item" href="../us_dashboard/lihat_akun.php">Lihat Akun</a>
+                                <a class="dropdown-item" href="../us_dashboard/ubah_akun.php">Ubah Akun</a>
+                                <a class="dropdown-item" href="../proses_user/logout_user.php">Log Out</a>
                             </div>
                         </div>
                     </div>

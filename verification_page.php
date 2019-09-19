@@ -52,11 +52,11 @@ if($data = mysqli_fetch_array($query)){
                                         </div>
                                         <div class="form-group">
                                                 <label for="kode">Email</label>
-                                                <input type="text" class="form-control" name="email" value="'.$data['email'].'">
+                                                <input type="text" class="form-control" name="email" value="'.$data['email'].'" readonly>
                                         </div>
                                         <div class="form-group">
                                                 <label for="kode">Username</label>
-                                                <input type="text" class="form-control" name="username" value="'.$data['username'].'">
+                                                <input type="text" class="form-control" name="username" value="'.$data['username'].'" readonly>
                                         </div>
                                         <div class="form-group">
                                                 <label for="kode">Kode Verifikasi</label>

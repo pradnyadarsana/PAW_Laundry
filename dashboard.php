@@ -22,8 +22,8 @@
         <div class="backgroundAll"></div>
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="./user_login.php"><img src="img/icon/logo.png" width="30" alt="logo"></a>
-                <h3 class="navbar-brand ml-2">PAW Laundry</h3>
+                <a class="navbar-brand" href="./index.php"><img src="img/icon/logo.png" width="30" alt="logo"></a>
+                <a href="./index.php"><h3 class="navbar-brand ml-2">PAW Laundry</h3></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
