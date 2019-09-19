@@ -1,5 +1,5 @@
 <?php
-include '../us_layout/us_dashboard.php';
+include '../pg_layout/pg_dashboard.php';
 echo'
     <title>Beranda - PAW Laundry</title>
     <div class="bd-example mt-5">

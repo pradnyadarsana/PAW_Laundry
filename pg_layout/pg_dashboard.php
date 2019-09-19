@@ -1,4 +1,5 @@
 <?php
+include "../db.php";
     echo '<!doctype html>
     <html lang="en">
     <head>
@@ -22,17 +23,17 @@
         <div class="backgroundAll"></div>
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="./pg_dashboard"><img src="../img/icon/logo.png" width="30" alt="logo"></a>
-                <h3 class="navbar-brand">PAW Laundry</h3>
+                <a class="navbar-brand" href="../pg_dashboard"><img src="../img/icon/logo.png" width="30" alt="logo"></a>
+                <a href="../pg_dashboard"><h3 class="navbar-brand">PAW Laundry</h3></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link" href="about.html">Beranda</a>
+                        <a class="nav-item nav-link" href="../pg_dashboard">Beranda</a>
                         <!--<a class="nav-item nav-link" href="contact.html">Kelola Harga</a>-->
                         <div class="dropdown">
-                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="contact.html" 
+                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="#" 
                             aria-haspopup="true" aria-expanded="false">Kelola Paket</a>
                             <div class="dropdown-menu mt-2">
                                 <a class="dropdown-item" href="#">Tambah Paket</a>
@@ -41,11 +42,11 @@
                         </div>
                         <a class="nav-item nav-link" href="./tentang.php">Kelola Pesanan</a>
                         <div class="dropdown">
-                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Akun</a>
+                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="#">Kelola Akun</a>
                             <div class="dropdown-menu mt-2">
-                                <a class="dropdown-item" href="#">Lihat Akun</a>
+                                <a class="dropdown-item" href="../pg_dashboard/lihat_akun_pg.php">Lihat Akun</a>
                                 <a class="dropdown-item" href="#">Ubah Akun</a>
-                                <a class="dropdown-item" href="#">Log Out</a>
+                                <a class="dropdown-item" href="../proses_pg/logout_pg.php">Log Out</a>
                             </div>
                         </div>
                     </div>

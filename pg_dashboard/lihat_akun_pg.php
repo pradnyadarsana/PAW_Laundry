@@ -1,8 +1,8 @@
 <?php
 session_start();
-if($_SESSION['isLogin']){
-    include "../us_layout/us_dashboard.php";
-    $user=$_SESSION['user'];
+if($_SESSION['isLoginPegawai']){
+    include "../pg_layout/pg_dashboard.php";
+    $user=$_SESSION['pegawai'];
     if($user['jenis_kelamin']==0)
     {
         $kelamin="Laki-laki";
@@ -13,10 +13,10 @@ if($_SESSION['isLogin']){
         <title>Akun Anda - PAW Laundry</title>
         <div class="jumbotron mt-5 mb-0 about-page text-dark text-left">
             <div class="container">
-                <h2 class="display-6 font-weight-bold mt-3">Detail Akun Anda</h2>
+                <h2 class="display-6 font-weight-bold mt-3">Detail Akun Anda - Pegawai</h2>
                 <h1 class="display-3 font-weight-bold mt-5" name="nama">'.$user['nama'].'</h1>
                 <p class="lead font-weight-normal" name="username">'.$user['username'].'</p>
-                <a href="../proses_user/logout_user.php"><p class="lead font-weight-normal text-right" style="color: red">Logout</p></a>
+                <a href="../proses_pg/logout_pg.php"><p class="lead font-weight-normal text-right" style="color: red">Logout</p></a>
                 <hr class="my-5" style="color: black">
                 <p class="lead font-weight-normal" name="email">'.$user['email'].'</p>
                 <p class="lead font-weight-normal" name="telp">'.$user['telepon'].'</p>
