@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon" href="img/icon/logo.jpg">
+    </head>
+    <body id="top" class="join-page">
+        <!-- Navbar -->
+
+        <title>Kelola Pesanan - PAW Laundry</title>
+        <!-- Table --> 
+        <div class="container"> 
+                <h1 class="text-center mt-2">PAW_Laundry</h1>
+                <table class="table table-striped table-primary" > 
+                        <thead> 
+                            <tr> 
+                            <th scope="col">ID</th> 
+                            <th scope="col">Username</th> 
+                            <th scope="col">No.Telp</th> 
+                            <th scope="col">Alamat</th> 
+                            <th scope="col">Nama Paket</th>
+                            <th scope="col">Berat</th>
+                            <th scope="col">Total Harga</th>
+                            <th scope="col">Status</th> 
+                            </tr> 
+                        </thead> 
+                        <tbody> 
+                                <tr class="table-success"> 
+                                    <td class="lead font-weight-normal" name="id"></td>
+                                    <td class="lead font-weight-normal" name="username"></td>
+                                    <td class="lead font-weight-normal" name="telepon"></td>
+                                    <td class="lead font-weight-normal" name="alamat"></td>
+                                    <td class="lead font-weight-normal" name="paket"></td>
+                                    <td class="lead font-weight-normal" name="berat"></td>
+                                    <td class="lead font-weight-normal" name="harga"></td>
+                                    <td class="lead font-weight-normal" name="status"></td>
+                                    <td>
+                                            <div class="form-group col-md-6">
+                                                    <select class="form-control" type="text" name="status"  required>
+                                                        <option value="1">Belum Diproses</option> 
+                                                        <option value="2">Sedang Diproses</option>
+                                                        <option value="2">Pesanan Selesai</option>
+                                                    </select>
+                                                </div>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" role="button">Konfirmasi</a>
+                                    </td>
+                                </tr> 
+                        </tbody> 
+                </table> 
+            </div>
+    </body>
+</html>
