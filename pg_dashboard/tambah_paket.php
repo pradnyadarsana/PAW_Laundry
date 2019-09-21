@@ -23,11 +23,11 @@ if($_SESSION['isLoginPegawai']){
                                 </div>
                                 <div class="form-row justify-content-between">
                                     <div class="form-group col-md-12">
-                                        <label for="lama">Lama</label>
+                                        <label for="lama">Lama (Hari)</label>
                                         <input type="text" class="form-control" name="lama" placeholder="lama" required="required">
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="harga">Harga</label>
+                                        <label for="harga">Harga per KG</label>
                                         <input type="text" class="form-control" name="harga" placeholder="Harga" required="required">
                                     </div>
                                 <div class="form-row justify-content-center mt-5">

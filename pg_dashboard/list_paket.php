@@ -15,7 +15,7 @@ if($_SESSION['isLoginPegawai'])
                     <tr> 
                     <th scope="col">NO</th> 
                     <th scope="col">Jenis Paket</th> 
-                    <th scope="col">Lama Waktu</th> 
+                    <th scope="col">Lama Waktu (Hari)</th> 
                     <th scope="col">Harga Per KG</th>
                     <th scope="col">Pengaturan</th>
                     </tr> 
