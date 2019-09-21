@@ -20,36 +20,18 @@ if(isset($_POST['store'])){
     $status = 0;
     $verif_code = rand(10000,99999);
     
+    $query = mysqli_query($con, "SELECT * FROM data_pengguna WHERE username='$username' OR email='$email'") or die(mysqli_error($con));
+    if(mysqli_num_rows($query) == 0){
+        $input = mysqli_query($con,"INSERT INTO data_pengguna(nama, telepon, email, username, password, tanggal_lahir, jenis_kelamin, status_aktif, kode_verif)
+        VALUE('$nama','$telp','$email','$username','$password','$tanggalLahir','$jenisKelamin','$status','$verif_code')") or die(mysqli_error($con));
 
-    $input = mysqli_query($con,"INSERT INTO data_pengguna(nama, telepon, email, username, password, tanggal_lahir, jenis_kelamin, status_aktif, kode_verif)
-    VALUE('$nama','$telp','$email','$username','$password','$tanggalLahir','$jenisKelamin','$status','$verif_code')") or die(mysqli_error($con));
-    
-    /*$to 	= $email;
-    $judul 	= 'Sign Up | Verifikasi';
-    $dari	= 'From: pawlaundry@gmail.com' . "\r\n";
-
-    $pesan	= '
-    Terima kasih sudah ingin bergabung bersama kami!
-    Akun anda telah dibuat, kamu bisa login setelah melakukan verifikasi dengan memberikan kode di bawah ini.
-    
-    ------------------------
-    Username: '.$username.'
-    Email: '.$email.'
-    ------------------------
-     
-    Kode Verifikasi : '.$verif_code.'
-     
-    ';
-
-
-    $kirim	= mail($to, $judul, $pesan, $dari);*/
-
-    if($input){
-        echo '<script>alert("success"); window.location = "../verification_page.php?username='.$username.'"</script>';
-    }else{
-        //echo '<script>alert("failed"); window.location = "../user_signup.php"</script>';
-        //echo '<script>window.history.back()</script>';
-        echo '<script>alert("test")</script>';
+        if($input){
+            echo '<script>alert("success"); window.location = "../verification_page.php?username='.$username.'"</script>';
+        }else{
+            echo '<script>alert("failed"); window.location = "../user_signup.php"</script>';
+        }
+    }else{ 
+        echo '<script>alert("Username atau email anda sudah digunakan"); window.history.back()</script>';
     }
 }else{
     echo '<script>window.history.back()</script>';
