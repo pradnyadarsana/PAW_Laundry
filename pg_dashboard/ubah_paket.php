@@ -34,7 +34,7 @@ $data = mysqli_fetch_assoc($query);
                                         <input type="text" class="form-control" name="lama" value="<?php echo $data['lama']; ?>">
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="harga">Harga</label>
+                                        <label for="harga">Harga per KG</label>
                                         <input type="text" class="form-control" name="harga" value="<?php echo $data['harga']; ?>">
                                     </div>
                                 <div class="form-row justify-content-center mt-5">

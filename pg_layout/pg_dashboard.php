@@ -45,7 +45,7 @@ include "../db.php";
                             <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="#">Kelola Akun</a>
                             <div class="dropdown-menu mt-2">
                                 <a class="dropdown-item" href="../pg_dashboard/lihat_akun_pg.php">Lihat Akun</a>
-                                <a class="dropdown-item" href="#">Ubah Akun</a>
+                                <a class="dropdown-item" href="../pg_dashboard/ubah_akun.php">Ubah Akun</a>
                                 <a class="dropdown-item" href="../proses_pg/logout_pg.php">Log Out</a>
                             </div>
                         </div>

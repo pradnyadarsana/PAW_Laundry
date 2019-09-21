@@ -1,8 +1,8 @@
 <?php
 session_start();
-if($_SESSION['isLogin']){
-    include "../us_layout/us_dashboard.php";
-    $user=$_SESSION['user'];
+if($_SESSION['isLoginPegawai']){
+    include "../pg_layout/pg_dashboard.php";
+    $user=$_SESSION['pegawai'];
 
     function active_radio_button($value,$input){
         $result =  $value==$input?'checked':'';
@@ -10,29 +10,30 @@ if($_SESSION['isLogin']){
     }
 
     echo'
-    <title>Edit Akun - PAW Laundry</title>
+    <title>Edit Akun Pegawai - PAW Laundry</title>
         <div class="jumbotron full-transparent mb-0">
             <div class="container">
                 <div class="mt-5 text-left">
-                    <h1 class="display-4">Ubah Data Akun</h1>
+                    <h1 class="display-4">Ubah Data Pegawai</h1>
                 </div>
                 <hr class="my-5">
                 <div>
-                    <form class="container pt-2" data-spy="scroll" data-target="#navbar" action="../proses_user/update_user.php" method="post">
+                    <form class="container pt-2" data-spy="scroll" data-target="#navbar" action="../proses_pg/edit_akun.php" method="post">
                         <div class="form-row justify-content-start">
                             <div class="form-group col-md-4">
+                                <input type="hidden" name="id" value="'.$data['id'].'">
                                 <label for="nama">Nama</label>
                                 <input type="text" class="form-control" name="nama" placeholder="Name" value="'.$user['nama'].'" required="required">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" name="email" placeholder="Email" value="'.$user['email'].'" required="required" readonly>
+                                <input type="email" class="form-control" name="email" placeholder="Email" value="'.$user['email'].'" required="required">
                             </div>
                         </div>
                         <div class="form-row justify-content-start">
                             <div class="form-group col-md-4">
                                 <label for="username">Username</label>
-                                <input type="text" class="form-control" name="username" placeholder="Username" value="'.$user['username'].'" required="required">
+                                <input type="text" class="form-control" name="username" placeholder="Username" value="'.$user['username'].'" required="required" readonly>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="password">Password</label>
@@ -42,7 +43,7 @@ if($_SESSION['isLogin']){
                         <div class="form-row justify-content-start">
                             <div class="form-group col-md-4">
                                 <label for="tanggalLahir">Tanggal Lahir</label>
-                                <input type="date" class="form-control" name="tanggalLahir" placeholder="Tanggal Lahir" value="'.$user['tanggal_lahir'].'" required="required">
+                                <input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir" value="'.$user['tanggal_lahir'].'" required="required">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="telp">Nomor Telepon</label>
@@ -75,5 +76,7 @@ if($_SESSION['isLogin']){
         </div>
     </body>
 </html>';
+}else{
+    header("location: ../pg_login.php");
 }
 ?>
