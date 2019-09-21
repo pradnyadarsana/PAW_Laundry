@@ -33,8 +33,8 @@ if($_SESSION['isLoginPegawai'])
                             <td>'.$data['nama_paket'].'</td>                         
                             <td>'.$data['lama'].'</td>                         
                             <td>'.$data['harga'].'</td>                                             
-                            <td><a href="./formedit.php?id='.$data['id'].'">Edit </a>/                             
-                                <a href="../proses/deletePeserta.php?id='.$data['id'].'" onclick="return confirm(\'Yakin?\')">Hapus </a>
+                            <td><a href="./ubah_paket.php?id='.$data['id'].'">Edit </a>/                             
+                                <a href="../proses_pg/delete_paket.php?id='.$data['id'].'" onclick="return confirm(\'Yakin?\')">Hapus </a>
                             </td>                       
                             </tr>                 
                         ';                 
