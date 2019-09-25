@@ -31,8 +31,8 @@ include "../db.php";
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
                         <a class="nav-item nav-link" href="../us_dashboard">Beranda</a>
-                        <a class="nav-item nav-link" href="contact.html">Tentang Kami</a>
-                        <a class="nav-item nav-link" href="gallery.html">Hubungi Kami</a>
+                        <a class="nav-item nav-link" href="../us_dashboard/tentang_kami.php">Tentang Kami</a>
+                        <a class="nav-item nav-link" href="../us_dashboard/hubungi_kami.php">Hubungi Kami</a>
                         <div class="dropdown">
                             <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Pesanan</a>
                             <div class="dropdown-menu mt-2">
