@@ -34,7 +34,7 @@ echo'
             
             <table class="table table-striped table-primary" > 
                 <thead> 
-                    <tr> 
+                    <tr>
                     <th scope="col">ID PESANAN</th>
                     <th scope="col">USERNAME</th>
                     <th scope="col">TELEPON</th>
