@@ -42,21 +42,11 @@ echo'
                                         ';if(mysqli_num_rows($paket) != 0){
                                             while($row = mysqli_fetch_array($paket))
                                             {
-                                                echo '<option value="'.$row['nama_paket'].'">'.$row['nama_paket'].' - '.$row['lama'].' hari<option>';  
+                                                echo '<option value="'.$row['nama_paket'].'">'.$row['nama_paket'].' - '.$row['lama'].' hari - '.$row['harga'].'<option>';  
                                             }
                                             
                                         } echo'
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="form-row justify-content-center mt-4">
-                                    <div class="form-group col-md-4 text-center">
-                                        <button name="cekTotal" class="btn btn-secondary" onclick="getHarga()">Cek Total</button>
-                                    </div>
-                                </div>
-                                <div class="form-row justify-content-center">
-                                    <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" name="totalharga" placeholder="Total Harga">
                                     </div>
                                 </div>
                                 <div class="form-row justify-content-center mt-5">
@@ -71,18 +61,6 @@ echo'
             </div>  
         </div>
     </body>
-    <script>
-        function getHarga()
-        {
-            var berat = document.getElementByName("berat").innerHTML;
-            var nama_paket = document.getElementByName("paket");
-            var harga_paket = nama_paket.options[nama_paket.selectedIndex].value;
-
-            alert(berat + " " + harga_paket);
-            var total_harga = berat*harga_paket;
-            document.getElementByName("totalharga").innerHTML=total_harga;
-        }
-    </script>
 </html>';
 }
 ?>

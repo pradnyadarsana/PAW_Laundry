@@ -46,25 +46,15 @@ if($_GET['status']!="Belum diproses"){
                                         {
                                             if($row['nama_paket']==$data['paket'])
                                             {
-                                                echo '<option  selected="selected">'.$row['nama_paket'].'<option>';  
+                                                echo '<option value="'.$row['nama_paket'].'"  selected="selected">'.$row['nama_paket'].' - '.$row['lama'].' hari - '.$row['harga'].'<option>';  
                                             
                                             }else{
-                                                echo '<option>'.$row['nama_paket'].'<option>';  
+                                                echo '<option value="'.$row['nama_paket'].'">'.$row['nama_paket'].' - '.$row['lama'].' hari - '.$row['harga'].'<option>';  
                                             }
                                             
                                         }
                                     } echo'
                                     </select>
-                                </div>
-                            </div>
-                            <div class="form-row justify-content-center mt-4">
-                                <div class="form-group col-md-4 text-center">
-                                    <button type="submit" name="cekTotal" class="btn btn-secondary">Cek Total</button>
-                                </div>
-                            </div>
-                            <div class="form-row justify-content-center">
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" name="totalharga" value="'.$data['harga'].'" placeholder="Total Harga">
                                 </div>
                             </div>
                             <div class="form-row justify-content-center mt-5">
