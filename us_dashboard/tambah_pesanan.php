@@ -8,6 +8,8 @@ if($_SESSION['isLogin']){
         $result =  $value==$input?'checked':'';
         return $result;
     }
+    $paket = mysqli_query($con, "SELECT * FROM data_paketharga") or die(mysqli_error($con));
+
 
 echo'
 <!doctype html>
@@ -32,13 +34,15 @@ echo'
                 </div>
                 <hr class="my-5">
                 <div>
-                    <form class="container pt-2" data-spy="scroll" data-target="#navbar">
+                    <form class="container pt-2" data-spy="scroll" data-target="#navbar" action="../proses_user/tambah_pesanan.php" method="post">
                         <div class="form-row justify-content-center">
                             <div class="form-group col-md-6">
                                 <div class="form-row justify-content-center">
                                     <div class="form-group col-md-12">
+                                        <input type="text" class="form-control" name="username" value="'.$user['username'].'" hidden="true">
+                                        <input type="text" class="form-control" name="telepon" value="'.$user['telepon'].'" hidden="true">
                                         <label for="alamat">Alamat</label>
-                                        <input type="text" class="form-control" name="alamat" placeholder="Name" required="required">
+                                        <input type="text" class="form-control" name="alamat" placeholder="Alamat" required="required">
                                     </div>
                                 </div>
                                 <div class="form-row justify-content-between">
@@ -48,10 +52,13 @@ echo'
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="paket">Paket</label>
-                                        <select class="form-control" type="text" name="sesi"  required>
-                                            <option value="1">1</option> 
-                                            <option value="2">2</option> 
-                                            <option value="3">3</option>
+                                        <select class="form-control" type="text" name="paket" required>
+                                        ';if(mysqli_num_rows($paket) != 0){
+                                            while($row = mysqli_fetch_array($paket))
+                                            {
+                                                echo '<option>'.$row['nama_paket'].'<option>';  
+                                            }
+                                        } echo'
                                         </select>
                                     </div>
                                 </div>
@@ -67,7 +74,7 @@ echo'
                                 </div>
                                 <div class="form-row justify-content-center mt-5">
                                     <div class="form-group col-md-4 text-center">
-                                        <button type="submit" name="update" class="btn btn-secondary" style="margin-bottom: 40%">Konfirmasi</button>
+                                        <button type="submit" name="store" class="btn btn-secondary" style="margin-bottom: 40%">Konfirmasi</button>
                                     </div>
                                 </div>
                             </div>
