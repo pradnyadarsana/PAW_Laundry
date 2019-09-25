@@ -37,7 +37,7 @@ include "../db.php";
                             <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Pesanan</a>
                             <div class="dropdown-menu mt-2">
                                 <a class="dropdown-item" href="../us_dashboard/tambah_pesanan.php">Tambah Pesanan</a>
-                                <a class="dropdown-item" href="../us_dashboard/lihat_pesanan.php">Lihat Pesanan</a>
+                                <a class="dropdown-item" href="../us_dashboard/tampil_pesanan.php">Lihat Pesanan</a>
                             </div>
                         </div>
                         <div class="dropdown">
