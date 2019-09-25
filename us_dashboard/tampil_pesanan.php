@@ -46,35 +46,33 @@ if($_SESSION['isLogin']){
                     <th scope="col">PENGATURAN</th> 
                     </tr> 
                 </thead> 
-                <tbody> 
-                    <?php
-                    $query = mysqli_query($con,"SELECT * FROM data_pesanan") or die(mysqli_error($con)); 
-                    if(mysqli_num_rows($query) == 0){             
-                        echo '<tr> <td colspan="5"> Tidak ada data ! </td></tr>';         
-                    }else{  
-                        $no = 1;             
-                        while($data = mysqli_fetch_assoc($query)){                 
-                            echo '<tr>                         
-                                    <td>'.$no.'</td>
-                                    <td>'.$data['id'].'</td>                        
-                                    <td>'.$data['username'].'</td>                         
-                                    <td>'.$data['telepon'].'</td>                         
-                                    <td>'.$data['alamat'].'</td>           
-                                    <td>'.$data['paket'].'</td>                         
-                                    <td>'.$data['berat'].'</td>                         
-                                    <td>'.$data['harga'].'</td>                        
-                                    <td>'.$data['status'].'</td>                         
-                                    <td>'.$data['tanggal'].'</td>                                            
-                                    <td><a href="../proses_user/edit_pesanan.php?id='.$data['id'].'">Edit </a>/                             
-                                        <a href="../proses_user/hapus_pesanan.php?id='.$data['id'].'" onclick="return confirm(\'Yakin?\')">Hapus </a>
-                                    </td>                       
-                                    </tr>                 
-                                ';                 
-                            $no++;             
-                        }         
-                    }?>
-                </tbody>
             </table> 
+                <?php
+                $query = mysqli_query($con,"SELECT * FROM data_pesanan") or die(mysqli_error($con)); 
+                if(mysqli_num_rows($query) == 0){             
+                    echo '<tr> <td colspan="5"> Tidak ada data ! </td></tr>';         
+                }else{  
+                    $no = 1;             
+                    while($data = mysqli_fetch_assoc($query)){                 
+                        echo '<tr>                         
+                                <td>'.$no.'</td>
+                                <td>'.$data['id'].'</td>                        
+                                <td>'.$data['username'].'</td>                         
+                                <td>'.$data['telepon'].'</td>                         
+                                <td>'.$data['alamat'].'</td>           
+                                <td>'.$data['paket'].'</td>                         
+                                <td>'.$data['berat'].'</td>                         
+                                <td>'.$data['harga'].'</td>                        
+                                <td>'.$data['status'].'</td>                         
+                                <td>'.$data['tanggal'].'</td>                                            
+                                <td><a href="../proses_user/edit_pesanan.php?id='.$data['id'].'">Edit </a>/                             
+                                    <a href="../proses_user/hapus_pesanan.php?id='.$data['id'].'" onclick="return confirm(\'Yakin?\')">Hapus </a>
+                                </td>                       
+                                </tr>                 
+                            ';                 
+                        $no++;             
+                    }         
+                }?>
         </div>
         
 
