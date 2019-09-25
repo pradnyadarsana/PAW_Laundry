@@ -17,7 +17,7 @@ if(isset($_POST['store'])){
 
     /*status : belum diproses, sedang diproses, pesanan selesai*/
 
-    $status = "belum diproses";
+    $status = "Belum diproses";
 
     $input = mysqli_query($con,"INSERT INTO data_pesanan(username, telepon, alamat, paket, berat, harga, status, tanggal)
     VALUE('$username','$telepon','$alamat','$paket','$berat','$total_harga','$status','$tanggal')") or die(mysqli_error($con));

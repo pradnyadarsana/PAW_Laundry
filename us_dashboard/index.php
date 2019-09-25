@@ -1,6 +1,8 @@
-
 <?php
-include '../us_layout/us_dashboard.php';
+session_start();
+if($_SESSION['isLogin']){
+    include "../us_layout/us_dashboard.php";
+    $user=$_SESSION['user'];
 echo'
     <title>Beranda - PAW Laundry</title>
   
@@ -15,33 +17,36 @@ echo'
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                            
-                        <img src="../img/bg/blanket.jpg"  style="size:cover; attachment:fixed;" class="d-block w-100" alt="..." >
+                        <img src="../img/bg/blanket.jpg"  style="size:cover; attachment:fixed;" class="d-block w-100" alt="..." style="max-height:100%">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>PAW Laundry</h5>
                             <p>Jasa cuci laundry yang dijamin pasti bersih, wangi, rapi, dan murah meriah.</p>
-                            <a href="#"><p>Pesan Sekarang</p></a>
+                            <a href="./tambah_pesanan.php"><p>Pesan Sekarang</p></a>
                         </div>
                             
                     </div>
                     <div class="carousel-item">
                         <img src="../img/gambar/arch1fix.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Architecture</h5>
-                            <p>Harmonizing sense of art and mind.</p>
+                            <h5>PAW Laundry</h5>
+                            <p>Jasa cuci laundry yang dijamin pasti bersih, wangi, rapi, dan murah meriah.</p>
+                            <a href="./tambah_pesanan.php"><p>Pesan Sekarang</p></a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="../img/gambar/arch2fix.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Architecture</h5>
-                            <p>Harmonizing sense of art and mind.</p>
+                            <h5>PAW Laundry</h5>
+                            <p>Jasa cuci laundry yang dijamin pasti bersih, wangi, rapi, dan murah meriah.</p>
+                            <a href="./tambah_pesanan.php"><p>Pesan Sekarang</p></a>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/gambar/arch3fix.jpg" class="d-block w-100" alt="...">
+                        <img src="../img/gambar/arch3fix.jpg" class="d-block w-100" alt="..." style="margin-bottom:-7%">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Architecture</h5>
-                            <p>Harmonizing sense of art and mind.</p>
+                            <h5>PAW Laundry</h5>
+                            <p>Jasa cuci laundry yang dijamin pasti bersih, wangi, rapi, dan murah meriah.</p>
+                            <a href="./tambah_pesanan.php"><p>Pesan Sekarang</p></a>
                         </div>
                     </div>
                 </div>
@@ -56,5 +61,5 @@ echo'
             </div>
         </div>
     </body>
-</html>';
+</html>';}
 ?>

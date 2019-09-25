@@ -31,17 +31,17 @@ include "../db.php";
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
                         <a class="nav-item nav-link" href="../us_dashboard">Beranda</a>
-                        <a class="nav-item nav-link" href="contact.html">Tentang Kami</a>
+                        <a class="nav-item nav-link" href="../us_dashboard/tentang.php">Tentang Kami</a>
                         <a class="nav-item nav-link" href="gallery.html">Hubungi Kami</a>
                         <div class="dropdown">
-                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Pesanan</a>
+                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="#">Kelola Pesanan</a>
                             <div class="dropdown-menu mt-2">
                                 <a class="dropdown-item" href="../us_dashboard/tambah_pesanan.php">Tambah Pesanan</a>
                                 <a class="dropdown-item" href="../us_dashboard/tampil_pesanan.php">Lihat Pesanan</a>
                             </div>
                         </div>
                         <div class="dropdown">
-                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="./tentang.php">Kelola Akun</a>
+                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="#">Kelola Akun</a>
                             <div class="dropdown-menu mt-2">
                                 <a class="dropdown-item" href="../us_dashboard/lihat_akun.php">Lihat Akun</a>
                                 <a class="dropdown-item" href="../us_dashboard/ubah_akun.php">Ubah Akun</a>

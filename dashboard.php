@@ -1,4 +1,5 @@
 <?php
+include "./db.php";
     echo '<!doctype html>
     <html lang="en">
     <head>

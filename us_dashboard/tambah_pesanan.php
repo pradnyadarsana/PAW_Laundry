@@ -42,7 +42,7 @@ echo'
                                         ';if(mysqli_num_rows($paket) != 0){
                                             while($row = mysqli_fetch_array($paket))
                                             {
-                                                echo '<option value="'.$row['harga'].'">'.$row['nama_paket'].'<option>';  
+                                                echo '<option value="'.$row['nama_paket'].'">'.$row['nama_paket'].' - '.$row['lama'].' hari<option>';  
                                             }
                                             
                                         } echo'

@@ -1,72 +1,62 @@
 <?php
 session_start();
-//if($_SESSION['isLogin'])
+if(!$_SESSION['isLogin']){
+    header("../index.php");
+}else{
     include "../us_layout/us_dashboard.php";
-    //$user=$_SESSION['user'];
-
-    function active_radio_button($value,$input){
-        $result =  $value==$input?'checked':'';
-        return $result;
+    $user=$_SESSION['user'];
+    $username=$user['username'];
     
+    $pesanan = mysqli_query($con, "SELECT * FROM data_pesanan WHERE username='$username'") or die(mysqli_error($con));
 
-echo'
-    <title>List Pesanan - PAW Laundry</title>
-    <div class="container">
-            <div class="form-row mt-5 justify-content-center">
-                <div class="form-group col-md-10">
-                    <h1 class="text-center">Pesanan Anda</h1> 
+    echo'
+        <div style="margin-top:6%">
+            <div class="container">
+                <div class="form-row mt-5 justify-content-between">
+                    <div class="form-group col-md-10">
+                        <h1 class="text-center">Kelola Pesanan</h1> 
+                    </div>
                 </div>
+                <table class="table table-striped table-primary"> 
+                    <thead> 
+                        <tr> 
+                        <th scope="col">ID</th>
+                        <th scope="col">PAKET</th>
+                        <th scope="col">BERAT</th>  
+                        <th scope="col">TOTAL HARGA</th>
+                        <th scope="col">ALAMAT</th> 
+                        <th scope="col">STATUS</th>
+                        <th scope="col">TANGGAL</th>
+                        <th scope="col">PENGATURAN</th>  
+                        </tr> 
+                    </thead> 
+                    <tbody> 
+                    ';if(mysqli_num_rows($pesanan) == 0){
+                        echo '<tr class="table-success">
+                            <td colspan="8">Tidak Ada data</td>';
+                    }else{
+                        while($row = mysqli_fetch_array($pesanan))
+                        {
+                        echo '<tr class="table-success"> 
+                                <td>'.$row['id'].'</td> 
+                                <td>'.$row['paket'].'</td> 
+                                <td>'.$row['berat'].'</td> 
+                                <td>'.$row['harga'].'</td> 
+                                <td>'.$row['alamat'].'</td>
+                                <td>'.$row['status'].'</td>
+                                <td>'.$row['tanggal'].'</td>
+                                <td><a class="btn btn-primary" href="./ubah_pesanan.php?id='.$row['id'].'&status='.$row['status'].'" role="button">Edit</a>
+                                <a class="btn btn-primary" href="../proses_user/delete_pesanan.php?id='.$row['id'].'&status='.$row['status'].'" role="button">Delete</a>
+                                </td>
+                            </tr>';
+                        }
+                    }echo'
+                            
+                    </tbody> 
+                </table> 
             </div>
-            
-            <table class="table table-striped table-primary" > 
-                <thead> 
-                    <tr>
-                    <th scope="col">ID PESANAN</th>
-                    <th scope="col">USERNAME</th>
-                    <th scope="col">TELEPON</th>
-                    <th scope="col">ALAMAT</th> 
-                    <th scope="col">PAKET</th> 
-                    <th scope="col">BERAT (KG)</th> 
-                    <th scope="col">HARGA</th>
-                    <th scope="col">STATUS</th>
-                    <th scope="col">JAM/TANGGAL</th>
-                    <th scope="col">PENGATURAN</th> 
-                    </tr> 
-                </thead> 
-            </table> 
-            <?php
-            $query = mysqli_query($con,"SELECT * FROM data_pesanan") or die(mysqli_error($con)); 
-            if(mysqli_num_rows($query) == 0){             
-                echo '<tr> <td colspan="5"> Tidak ada data ! </td></tr>';         
-            }else{  
-                $no = 1;             
-                while($data = mysqli_fetch_assoc($query)){                 
-                    echo '<tr>                         
-                            <td>'.$no.'</td>
-                            <td>'.$data['id'].'</td>                        
-                            <td>'.$data['username'].'</td>                         
-                            <td>'.$data['telepon'].'</td>                         
-                            <td>'.$data['alamat'].'</td>           
-                            <td>'.$data['paket'].'</td>                         
-                            <td>'.$data['berat'].'</td>                         
-                            <td>'.$data['harga'].'</td>                        
-                            <td>'.$data['status'].'</td>                         
-                            <td>'.$data['tanggal'].'</td>                                            
-                            <td><a href="../proses_user/edit_pesanan.php?id='.$data['id'].'">Edit </a>/                             
-                                <a href="../proses_user/hapus_pesanan.php?id='.$data['id'].'" onclick="return confirm(\'Yakin?\')">Hapus </a>
-                            </td>                       
-                            </tr>                 
-                        ';                 
-                    $no++;             
-                }         
-            }?>
         </div>
-        
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
-</html>
+</html>';
+}
+?>

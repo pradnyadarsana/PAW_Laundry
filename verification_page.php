@@ -1,6 +1,5 @@
 <?php
 include('./dashboard.php');
-include('./db.php');
 $username = $_GET['username'];
 $query = mysqli_query($con,"SELECT * FROM data_pengguna WHERE username='$username'")or die(mysqli_error($con));
 

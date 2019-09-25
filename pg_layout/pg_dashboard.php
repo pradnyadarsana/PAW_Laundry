@@ -40,7 +40,7 @@ include "../db.php";
                                 <a class="dropdown-item" href="../pg_dashboard/list_paket.php">Lihat Paket</a>
                             </div>
                         </div>
-                        <a class="nav-item nav-link" href="./tentang.php">Kelola Pesanan</a>
+                        <a class="nav-item nav-link" href="../pg_dashboard/kelola_pesanan.php">Kelola Pesanan</a>
                         <div class="dropdown">
                             <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="#">Kelola Akun</a>
                             <div class="dropdown-menu mt-2">

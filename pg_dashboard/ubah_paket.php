@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
 $query = mysqli_query($con, "SELECT * FROM data_paketharga WHERE id='$id'") or die(mysqli_error($con));
 $data = mysqli_fetch_assoc($query);
 ?>
-        <title>Tambah Paket - PAW Laundry</title>
+        <title>Ubah Paket - PAW Laundry</title>
 
         <div class="jumbotron full-transparent mb-0">
             <div class="container">
