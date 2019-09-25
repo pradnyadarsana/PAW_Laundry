@@ -10,21 +10,27 @@ echo'
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <style>  
                 body{
-                    background-image:url("https://wallpapercave.com/wp/wp1993630.jpg");
-                    background-size:cover;
-                    background-attachment: fixed;
+                    background-image:url("../img/gambar/bg_hub_kami.jpg");
+                    background-attachment:fixed;
+                    min-width:100%; min-height:100%;
+                    position:fixed;
+                    background-size: cover;
+                    opacity: 0.8;
+                    filter: alpha(opacity=20); 
                 }
-                #tengah {
-                  margin-left: 450px;
-                }
+                .jumbotron{
+                    background-size: 100% 100%;
+                    height: calc(100%);
+                    
+                  }
             </style>
         <title>Contact Us </title>
     </head>
     <body>
-    
+        <div class="jumbotron min-vh-100  m-0  d-flex flex-column" text-light text-left">
                 <div class="mt-5 text-center">
               
-                    <h1 class="display-4"><font color="white">Hubungi Kami</h1>
+                    <h1 class="display-4"><font color="black">Hubungi Kami</h1>
                     <p class="lead">Jangan ragu untuk memeberi kritik dan saran yang<br>
                         membangun untuk meningkatkan pelayanan kami.<br>
                         We always ready to help you.</p>
@@ -32,34 +38,36 @@ echo'
                 </div>
                 
                 <hr class="my-4">
-                <div id="tengah">
-                    <form class="container pt-4" data-spy="scroll" >
-                    <div class="form-row justify-center-end">
-                            <div class="form-group col-md-4 text-center col-centered">
+             
+                    <form class="container pt-2" data-spy="scroll" >
+                    <div class="form-row justify-left-end">
+                            <div class="form-group col-md-4 text-left col-centered">
                                 <label for="inputName">*Name</label>
-                                <input type="text" class="form-control text-center" id="fullname" placeholder="Name" required="required">
+                                <input type="text" class="form-control" id="fullname" placeholder="Name" required="required">
                             </div>
-                            <div class="form-group col-md-4 text-center col-centered">
+                            <div class="form-group col-md-4 text-left col-centered">
                                 <label for="inputEmail">*Email</label>
-                                <input type="email" class="form-control text-center" id="email" placeholder="Email" required="required">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required="required">
                             </div>
-                        </div>
-                       
-                        <div class="form-row justify-center-end">
-                            <div class="form-group col-md-8 text-center">
-                                <label for="inputMessage">Message</label>
-                                <textarea class="form-control text-center" id="inputMessage" placeholder="Your Message for Us..." rows="3"></textarea>
-                            </div>
-                        </div>
                     </div>
-                    <div class="form-row justify-center-end">
-                            <div class="form-group col-md-4 font-weight-light font-italic">
+                       
+                        <div class="form-row justify-left-end">
+                            <div class="form-group col-md-8 text-left">
+                                <label for="inputMessage">Message</label>
+                                <textarea class="form-control" id="inputMessage" placeholder="Your Message for Us..." rows="3"></textarea>
                             </div>
-                            <div class="form-group col-md-5 text-center">
+                        </div>
+                    
+                    <div class="form-row justify-right-end">
+                            <div class="form-group col-md-4 font-weight-light font-italic"></div>
+                            <div class="form-group col-md-4 text-right">
                                 <button type="submit" class="btn btn-secondary">Send</button>
                             </div>
-                        </div>
+                    </div>
+
+                 
                     </form>
+                    </div>
               
        
         
