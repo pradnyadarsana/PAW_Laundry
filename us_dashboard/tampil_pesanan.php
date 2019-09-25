@@ -35,32 +35,38 @@ echo'
             <table class="table table-striped table-primary" > 
                 <thead> 
                     <tr> 
-                    <th scope="col">ID PESANAN</th> 
+                    <th scope="col">ID PESANAN</th>
+                    <th scope="col">USERNAME</th>
+                    <th scope="col">TELEPON</th>
+                    <th scope="col">ALAMAT</th> 
                     <th scope="col">PAKET</th> 
                     <th scope="col">BERAT (KG)</th> 
-                    <th scope="col">HARGA</th> 
-                    <th scope="col">ALAMAT</th>
+                    <th scope="col">HARGA</th>
                     <th scope="col">STATUS</th>
                     <th scope="col">JAM/TANGGAL</th>
                     <th scope="col">PENGATURAN</th> 
                     </tr> 
                 </thead> 
-                <!--<tbody> 
-                    <?php foreach($mahasiswa as $mahasiswas): ?> 
+                <tbody> 
+                    <?php foreach($data_pesanan as $datas): ?> 
                         <tr class="table-success"> 
-                            <td><?php echo $mahasiswas->ID ?></td> 
-                            <td><?php echo $mahasiswas->NAMA ?></td> 
-                            <td><?php echo $mahasiswas->NPM ?></td> 
-                            <td><?php echo $mahasiswas->FAKULTAS ?></td> 
-                            <td><?php echo $mahasiswas->PRODI ?></td>
+                            <td><?php echo datas->id ?></td> 
+                            <td><?php echo datas->username ?></td> 
+                            <td><?php echo datas->telepon ?></td> 
+                            <td><?php echo datas->alamat ?></td> 
+                            <td><?php echo datas->paket ?></td>
+                            <td><?php echo datas->berat ?></td> 
+                            <td><?php echo datas->harga ?></td> 
+                            <td><?php echo datas->status ?></td> 
+                            <td><?php echo datas->tanggal ?></td>
                             <td>
-                            <a class="btn btn-primary" href="<?php echo site_url('mahasiswa/edit/'.$mahasiswas->ID) ?>" role="button">Edit</a>
-                            <a onclick="deleteConfirm('<?php echo site_url('mahasiswa/delete/'.$mahasiswas->ID) ?>')"
+                            <a class="btn btn-primary" href="<?php echo site_url('-'.datas->ID) ?>" role="button">Edit</a>
+                            <a onclick="deleteConfirm('<?php echo site_url('-'.datas->ID) ?>')"
                                 href="#!" id="hapus" class="btn btn-danger" role="button">Hapus</a>
                             </td>
                         </tr> 
                         <?php endforeach ?> 
-                </tbody> -->
+                </tbody>
             </table> 
         </div>
         
