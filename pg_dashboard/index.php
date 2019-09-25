@@ -18,28 +18,27 @@ if($_SESSION['isLoginPegawai']){
                         <div class="carousel-caption d-none d-md-block">
                             <h5>PAW Laundry</h5>
                             <p>Jasa cuci laundry yang dijamin pasti bersih, wangi, rapi, dan murah meriah.</p>
-                            <a href="#"><p>Pesan Sekarang</p></a>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/gambar/arch1fix.jpg" class="d-block w-100" alt="...">
+                        <img src="../img/gambar/arch1fix.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Architecture</h5>
-                            <p>Harmonizing sense of art and mind.</p>
+                        <h5>PAW Laundry</h5>
+                        <p>Jasa cuci laundry yang dijamin pasti bersih, wangi, rapi, dan murah meriah.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/gambar/arch2fix.jpg" class="d-block w-100" alt="...">
+                        <img src="../img/gambar/arch2fix.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Architecture</h5>
-                            <p>Harmonizing sense of art and mind.</p>
+                        <h5>PAW Laundry</h5>
+                        <p>Jasa cuci laundry yang dijamin pasti bersih, wangi, rapi, dan murah meriah.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/gambar/arch3fix.jpg" class="d-block w-100" alt="...">
+                        <img src="../img/gambar/arch3fix.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Architecture</h5>
-                            <p>Harmonizing sense of art and mind.</p>
+                        <h5>PAW Laundry</h5>
+                        <p>Jasa cuci laundry yang dijamin pasti bersih, wangi, rapi, dan murah meriah.</p>
                         </div>
                     </div>
                 </div>

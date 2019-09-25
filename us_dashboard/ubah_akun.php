@@ -36,7 +36,7 @@ if($_SESSION['isLogin']){
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="Password" value="'.$user['password'].'" required="required">
+                                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
                             </div>
                         </div>
                         <div class="form-row justify-content-start">
