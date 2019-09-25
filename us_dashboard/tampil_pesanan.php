@@ -8,8 +8,7 @@ if($_SESSION['isLogin']){
         $result =  $value==$input?'checked':'';
         return $result;
     }
-
-echo'
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -48,24 +47,32 @@ echo'
                     </tr> 
                 </thead> 
                 <tbody> 
-                    <?php foreach($data_pesanan as $datas): ?> 
-                        <tr class="table-success"> 
-                            <td><?php echo datas->id ?></td> 
-                            <td><?php echo datas->username ?></td> 
-                            <td><?php echo datas->telepon ?></td> 
-                            <td><?php echo datas->alamat ?></td> 
-                            <td><?php echo datas->paket ?></td>
-                            <td><?php echo datas->berat ?></td> 
-                            <td><?php echo datas->harga ?></td> 
-                            <td><?php echo datas->status ?></td> 
-                            <td><?php echo datas->tanggal ?></td>
-                            <td>
-                            <a class="btn btn-primary" href="<?php echo site_url('-'.datas->ID) ?>" role="button">Edit</a>
-                            <a onclick="deleteConfirm('<?php echo site_url('-'.datas->ID) ?>')"
-                                href="#!" id="hapus" class="btn btn-danger" role="button">Hapus</a>
-                            </td>
-                        </tr> 
-                        <?php endforeach ?> 
+                    <?php
+                    $query = mysqli_query($con,"SELECT * FROM data_pesanan") or die(mysqli_error($con)); 
+                    if(mysqli_num_rows($query) == 0){             
+                        echo '<tr> <td colspan="5"> Tidak ada data ! </td></tr>';         
+                    }else{  
+                        $no = 1;             
+                        while($data = mysqli_fetch_assoc($query)){                 
+                            echo '<tr>                         
+                                    <td>'.$no.'</td>
+                                    <td>'.$data['id'].'</td>                        
+                                    <td>'.$data['username'].'</td>                         
+                                    <td>'.$data['telepon'].'</td>                         
+                                    <td>'.$data['alamat'].'</td>           
+                                    <td>'.$data['paket'].'</td>                         
+                                    <td>'.$data['berat'].'</td>                         
+                                    <td>'.$data['harga'].'</td>                        
+                                    <td>'.$data['status'].'</td>                         
+                                    <td>'.$data['tanggal'].'</td>                                            
+                                    <td><a href="../proses_user/edit_pesanan.php?id='.$data['id'].'">Edit </a>/                             
+                                        <a href="../proses_user/hapus_pesanan.php?id='.$data['id'].'" onclick="return confirm(\'Yakin?\')">Hapus </a>
+                                    </td>                       
+                                    </tr>                 
+                                ';                 
+                            $no++;             
+                        }         
+                    }?>
                 </tbody>
             </table> 
         </div>
@@ -77,6 +84,4 @@ echo'
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
-</html>'
-    }
-?>
+</html>
